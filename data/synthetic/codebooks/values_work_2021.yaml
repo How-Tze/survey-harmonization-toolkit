@@ -1,0 +1,16 @@
+schema_version: 1
+variables:
+  id: {label: Synthetic respondent identifier, type: string}
+  respondent_age: {label: Age in completed years, type: integer}
+  gender_code: {label: Gender code, type: integer}
+  qualification: {label: Highest qualification group, type: string}
+  employment_code: {label: Current employment code, type: integer}
+  monthly_personal_earnings: {label: Monthly personal earnings in fictional credits, type: number}
+  autonomy_score: {label: Work autonomy score, type: integer}
+  institution_score: {label: Trust in public institutions, type: integer}
+  community_activity: {label: Took part in a community activity, type: integer}
+  work_route: {label: Routed into work module, type: string}
+value_labels:
+  gender_code: {"10": Woman, "20": Man, "30": Nonbinary or other}
+  employment_code: {"1": Employed, "2": Unemployed, "3": Not in labor force}
+  community_activity: {"0": No, "1": Yes}

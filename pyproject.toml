@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "survey-harmonization-toolkit"
+version = "0.1.0"
+description = "Audit-first harmonization of synthetic survey data across sources and waves"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Hao Xie"}]
+dependencies = [
+  "pandas>=2.2,<4",
+  "pyreadstat>=1.3,<2",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+survey-harmonization = "survey_harmonization.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

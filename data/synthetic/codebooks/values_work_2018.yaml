@@ -1,0 +1,16 @@
+schema_version: 1
+variables:
+  respondent: {label: Synthetic respondent identifier, type: string}
+  age_years: {label: Age in completed years, type: integer}
+  gender_text: {label: Self-described gender category, type: string}
+  edu_code: {label: Highest education code, type: integer}
+  employment_text: {label: Current employment status, type: string}
+  annual_household_income: {label: Annual household income in fictional credits, type: number}
+  decision_control: {label: Decision control at work candidate item, type: integer}
+  trust_score: {label: Trust in public institutions, type: integer}
+  community_flag: {label: Took part in a community activity, type: string}
+  module_work: {label: Routed into work module, type: integer}
+  sample_weight: {label: Synthetic survey weight, type: number}
+value_labels:
+  edu_code: {"1": Lower secondary or less, "2": Upper secondary, "3": Tertiary}
+  module_work: {"0": Not eligible, "1": Eligible}

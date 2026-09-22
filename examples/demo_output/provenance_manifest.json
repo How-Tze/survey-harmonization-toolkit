@@ -1,0 +1,92 @@
+{
+  "approved_mappings": 65,
+  "blocked_mappings": [
+    {
+      "block_reason": "The 2022 label describes satisfaction with local services rather than trust.",
+      "canonical_variable": "institutional_trust",
+      "dataset_id": "civiclife_2022",
+      "review_status": "ambiguous",
+      "rule_version": 1,
+      "source_variable": "trust_index",
+      "survey_id": "civiclife",
+      "wave_id": "2022"
+    },
+    {
+      "block_reason": "No community participation field was generated for this wave.",
+      "canonical_variable": "community_participation",
+      "dataset_id": "household_paths_2019",
+      "review_status": "unavailable",
+      "rule_version": 1,
+      "source_variable": "",
+      "survey_id": "household_paths",
+      "wave_id": "2019"
+    },
+    {
+      "block_reason": "Candidate item intentionally awaits human review.",
+      "canonical_variable": "work_autonomy",
+      "dataset_id": "values_work_2018",
+      "review_status": "unreviewed",
+      "rule_version": 1,
+      "source_variable": "decision_control",
+      "survey_id": "values_work",
+      "wave_id": "2018"
+    },
+    {
+      "block_reason": "Personal monthly earnings cannot replace annual household income without additional evidence.",
+      "canonical_variable": "household_income",
+      "dataset_id": "values_work_2021",
+      "review_status": "ambiguous",
+      "rule_version": 1,
+      "source_variable": "monthly_personal_earnings",
+      "survey_id": "values_work",
+      "wave_id": "2021"
+    },
+    {
+      "block_reason": "This synthetic wave intentionally contains no survey weight.",
+      "canonical_variable": "survey_weight",
+      "dataset_id": "values_work_2021",
+      "review_status": "unavailable",
+      "rule_version": 1,
+      "source_variable": "",
+      "survey_id": "values_work",
+      "wave_id": "2021"
+    }
+  ],
+  "dataset_count": 7,
+  "harmonized_rows": 168,
+  "input_hashes": {
+    "config/canonical_variables.yaml": "c321e82f43a265412f48e4a1c450409e4a58a3ad2c3b2c44ea63346022ceda8b",
+    "config/datasets.yaml": "8c38d42d26c3ca30803d59420b340bdbeb6b1475189f3971c53d804edfe5c5b1",
+    "config/mappings.yaml": "7f59020b6160c082d0cb4790780ae5a089e0751ef15310a121c123e3df6e14c3",
+    "data/synthetic/codebooks/values_work_2018.yaml": "bfaa073cd2c50a79cd81b54eac42b6fdaf666b7d1f52681ff60618076c65b48f",
+    "data/synthetic/codebooks/values_work_2021.yaml": "f220b69521ee922bd8e0df64b33a1f63dde03da2beed200e5d5cb81eb39bc5df",
+    "data/synthetic/sources/civiclife_2018.sav": "248c874426f7999fc2ed46344d56ed04c1ecabb90fc97723342e3052940cf1c9",
+    "data/synthetic/sources/civiclife_2020.sav": "f61c19c939ceb75397ca1c1969022c8b7e0b578b93356ae428e7a30ed5bb24c8",
+    "data/synthetic/sources/civiclife_2022.sav": "abe47bc1edabe51ddcb0b0250e6c42c76e0340b215e213e36dcac66c862b251d",
+    "data/synthetic/sources/household_paths_2019.dta": "867c3a079f211aa6f16649ee2061af7e232351d2c1466b84e9d0f15f4fa6c588",
+    "data/synthetic/sources/household_paths_2021.dta": "ba32367c68326f4712eb780cfbc13088d6136303935d03a1297753479d4e3f11",
+    "data/synthetic/sources/values_work_2018.csv": "8c90f9fda64f9d2619c99e9169751c9e6c2282a1cbebbfe4a0be9c30d844e4cc",
+    "data/synthetic/sources/values_work_2021.csv": "9bb24abf5be0b4a59a13d843deb68e897b3cea12658dc8e104b71c2680ce42f3"
+  },
+  "output_hashes": {
+    "audit_report.md": "58d87f1cd2cef19871b1d51535bb464681bbeff84811576d84998fcba485de24",
+    "coverage_matrix.csv": "881d81c1b6c43a5893178e8ff4d84130016493518bf1815cd73992a4326d9fae",
+    "harmonized_long.csv": "0aeb9e1e6848837b55e7779e6315bde82fe7ea87340d3d2fb0a04c519cf8a1df",
+    "inventory.json": "4f375f981c5d48a29364003792ddb1487e8d2ba5deb58d4c29d260c9a9b6325b",
+    "mapping_review.csv": "b14e499f18df391c363d4201b5f0af487ab7092d8d91226c18469d7e92aa39e0",
+    "missingness_audit.csv": "6f94fee94d3a5895941b1ed64d50ffc75abc07d32a97d9964b5da0198300a2ca",
+    "schema_catalog.csv": "7813781fcd4da24676b5488a11e388546fe6c2b1546a8326b14469b7340be995",
+    "validation_issues.csv": "9bfe83746083a297e72e3cb1f8e4b0343894e1f6b6dce12c841d0f216e4465c3",
+    "value_labels.json": "13acb0c90cf69473df673c26b257232e2cd57aa840075eefa1242ca9e41e0dfb"
+  },
+  "provenance_note": "The manifest omits its own hash to avoid recursive self-reference.",
+  "run_timestamp": "2026-09-22T00:00:00Z",
+  "schema_version": 1,
+  "source_files_unchanged": true,
+  "status": "completed_with_blocked_mappings",
+  "synthetic_only": true,
+  "toolkit_version": "0.1.0",
+  "validation_issue_counts": {
+    "warning": 5
+  }
+}

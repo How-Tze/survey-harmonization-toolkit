@@ -1,0 +1,6 @@
+severity,code,dataset_id,survey_id,wave_id,canonical_variable,rule_version,count,message
+warning,mapping_blocked,civiclife_2022,civiclife,2022,institutional_trust,1,1,The 2022 label describes satisfaction with local services rather than trust.
+warning,mapping_blocked,household_paths_2019,household_paths,2019,community_participation,1,1,No community participation field was generated for this wave.
+warning,mapping_blocked,values_work_2018,values_work,2018,work_autonomy,1,1,Candidate item intentionally awaits human review.
+warning,mapping_blocked,values_work_2021,values_work,2021,household_income,1,1,Personal monthly earnings cannot replace annual household income without additional evidence.
+warning,mapping_blocked,values_work_2021,values_work,2021,survey_weight,1,1,This synthetic wave intentionally contains no survey weight.

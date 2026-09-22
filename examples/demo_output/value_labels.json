@@ -1,0 +1,132 @@
+{
+  "civiclife_2018": {
+    "community_member": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "educ3": {
+      "1": "Lower secondary or less",
+      "2": "Upper secondary",
+      "3": "Tertiary"
+    },
+    "labour": {
+      "1": "Employed",
+      "2": "Unemployed",
+      "3": "Not in labor force"
+    },
+    "sex": {
+      "1": "Man",
+      "2": "Woman"
+    },
+    "work_module": {
+      "0": "Not eligible",
+      "1": "Eligible"
+    }
+  },
+  "civiclife_2020": {
+    "education_code": {
+      "10": "Lower",
+      "20": "Upper",
+      "30": "Tertiary"
+    },
+    "employment_code": {
+      "1": "Employed",
+      "2": "Unemployed",
+      "3": "Not in labor force"
+    },
+    "gender_code": {
+      "0": "Woman",
+      "1": "Man"
+    },
+    "module_flag": {
+      "0": "Not eligible",
+      "1": "Eligible"
+    },
+    "participated": {
+      "0": "No",
+      "1": "Yes"
+    }
+  },
+  "civiclife_2022": {
+    "community_part": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "employ": {
+      "10": "Employed",
+      "20": "Unemployed",
+      "30": "Not in labor force"
+    },
+    "gender": {
+      "1": "Woman",
+      "2": "Man",
+      "3": "Nonbinary or other"
+    },
+    "work_module": {
+      "0": "Not eligible",
+      "1": "Eligible"
+    }
+  },
+  "household_paths_2019": {
+    "employment_code": {
+      "1": "Employed",
+      "2": "Unemployed",
+      "3": "Not in labor force"
+    },
+    "sex_code": {
+      "1": "Woman",
+      "2": "Man"
+    },
+    "work_route": {
+      "0": "Not eligible",
+      "1": "Eligible"
+    }
+  },
+  "household_paths_2021": {
+    "labor_state": {
+      "1": "Employed",
+      "2": "Unemployed",
+      "3": "Not in labor force"
+    },
+    "qualification": {
+      "1": "Lower",
+      "2": "Upper",
+      "3": "Tertiary"
+    },
+    "volunteer": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "work_eligible": {
+      "0": "Not eligible",
+      "1": "Eligible"
+    }
+  },
+  "values_work_2018": {
+    "edu_code": {
+      "1": "Lower secondary or less",
+      "2": "Upper secondary",
+      "3": "Tertiary"
+    },
+    "module_work": {
+      "0": "Not eligible",
+      "1": "Eligible"
+    }
+  },
+  "values_work_2021": {
+    "community_activity": {
+      "0": "False",
+      "1": "True"
+    },
+    "employment_code": {
+      "1": "Employed",
+      "2": "Unemployed",
+      "3": "Not in labor force"
+    },
+    "gender_code": {
+      "10": "Woman",
+      "20": "Man",
+      "30": "Nonbinary or other"
+    }
+  }
+}

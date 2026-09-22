@@ -1,0 +1,464 @@
+schema_version: 1
+rule_version: 1
+mappings:
+  civiclife_2018:
+    age:
+      source_variable: age_years
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: sex
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2"]}
+      transform_params:
+        value_map: {"1": man, "2": woman}
+    education:
+      source_variable: educ3
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": lower_secondary_or_less, "2": upper_secondary, "3": tertiary}
+    employment:
+      source_variable: labour
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": employed, "2": unemployed, "3": not_in_labor_force}
+    household_income:
+      source_variable: hh_income_annual
+      review_status: approved
+      transform: identity
+      missing_values: {"-9": not_stated}
+      expected_source: {minimum: 0, maximum: 500000}
+    work_autonomy:
+      source_variable: auto_rev
+      review_status: approved
+      transform: reverse_scale
+      missing_values: {"-8": dont_know}
+      routing: {indicator: work_module, eligible_values: ["1"]}
+      expected_source: {minimum: 1, maximum: 5}
+      transform_params: {source_min: 1, source_max: 5}
+    institutional_trust:
+      source_variable: trust_index
+      review_status: approved
+      transform: identity
+      missing_values: {"-9": not_stated}
+      expected_source: {minimum: 1, maximum: 5}
+    community_participation:
+      source_variable: community_member
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2"]}
+      transform_params:
+        value_map: {"1": "yes", "2": "no"}
+    survey_weight:
+      source_variable: weight
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 0.01, maximum: 10}
+    work_module:
+      source_variable: work_module
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": not_eligible, "1": eligible}
+
+  civiclife_2020:
+    age:
+      source_variable: age
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: gender_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": woman, "1": man}
+    education:
+      source_variable: education_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["10", "20", "30"]}
+      transform_params:
+        value_map: {"10": lower_secondary_or_less, "20": upper_secondary, "30": tertiary}
+    employment:
+      source_variable: employment_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": employed, "2": unemployed, "3": not_in_labor_force}
+    household_income:
+      source_variable: income_year
+      review_status: approved
+      transform: identity
+      missing_values: {"999999": not_stated}
+      expected_source: {minimum: 0, maximum: 500000}
+    work_autonomy:
+      source_variable: autonomy_0_4
+      review_status: approved
+      transform: scale_shift
+      missing_values: {"98": dont_know}
+      routing: {indicator: module_flag, eligible_values: ["1"]}
+      expected_source: {minimum: 0, maximum: 4}
+      transform_params: {add: 1}
+    institutional_trust:
+      source_variable: trust_score
+      review_status: approved
+      transform: identity
+      missing_values: {"99": not_stated}
+      expected_source: {minimum: 1, maximum: 5}
+    community_participation:
+      source_variable: participated
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": "no", "1": "yes"}
+    survey_weight:
+      source_variable: survey_weight
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 0.01, maximum: 10}
+    work_module:
+      source_variable: module_flag
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": not_eligible, "1": eligible}
+
+  civiclife_2022:
+    age:
+      source_variable: age_yrs
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: gender
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": woman, "2": man, "3": nonbinary_or_other}
+    education:
+      source_variable: edu_level
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: [lower, upper, tertiary]}
+      transform_params:
+        value_map: {lower: lower_secondary_or_less, upper: upper_secondary, tertiary: tertiary}
+    employment:
+      source_variable: employ
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["10", "20", "30"]}
+      transform_params:
+        value_map: {"10": employed, "20": unemployed, "30": not_in_labor_force}
+    household_income:
+      source_variable: household_income
+      review_status: approved
+      transform: identity
+      missing_values: {"-99": not_stated}
+      expected_source: {minimum: 0, maximum: 500000}
+    work_autonomy:
+      source_variable: control_score
+      review_status: approved
+      transform: identity
+      missing_values: {"97": refused}
+      routing: {indicator: work_module, eligible_values: ["1"]}
+      expected_source: {minimum: 1, maximum: 5}
+    institutional_trust:
+      source_variable: trust_index
+      review_status: ambiguous
+      transform: null
+      review_note: The 2022 label describes satisfaction with local services rather than trust.
+      comparability_warning: Matching numeric endpoints do not resolve changed meaning.
+    community_participation:
+      source_variable: community_part
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": "no", "1": "yes"}
+    survey_weight:
+      source_variable: weight
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 0.01, maximum: 10}
+    work_module:
+      source_variable: work_module
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": not_eligible, "1": eligible}
+
+  household_paths_2019:
+    age:
+      source_variable: age
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: sex_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2"]}
+      transform_params:
+        value_map: {"1": woman, "2": man}
+    education:
+      source_variable: schooling_years
+      review_status: approved
+      transform: numeric_bin
+      missing_values: {"-9": not_stated}
+      expected_source: {minimum: 0, maximum: 25}
+      transform_params:
+        breaks: [0, 12, 16, 30]
+        labels: [lower_secondary_or_less, upper_secondary, tertiary]
+    employment:
+      source_variable: employment_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": employed, "2": unemployed, "3": not_in_labor_force}
+    household_income:
+      source_variable: hh_inc_year
+      review_status: approved
+      transform: identity
+      missing_values: {"-9": not_stated}
+      expected_source: {minimum: 0, maximum: 500000}
+    work_autonomy:
+      source_variable: job_control
+      review_status: approved
+      transform: identity
+      missing_values: {".a": not_stated}
+      routing: {indicator: work_route, eligible_values: ["1"]}
+      expected_source: {minimum: 1, maximum: 5}
+    institutional_trust:
+      source_variable: trustgov_0_4
+      review_status: approved
+      transform: scale_shift
+      missing_values: {"-8": dont_know}
+      expected_source: {minimum: 0, maximum: 4}
+      transform_params: {add: 1}
+    community_participation:
+      source_variable: null
+      review_status: unavailable
+      transform: null
+      review_note: No community participation field was generated for this wave.
+    survey_weight:
+      source_variable: pweight
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 0.01, maximum: 10}
+    work_module:
+      source_variable: work_route
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": not_eligible, "1": eligible}
+
+  household_paths_2021:
+    age:
+      source_variable: age_yrs
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: gender_text
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: [W, M, X]}
+      transform_params:
+        value_map: {W: woman, M: man, X: nonbinary_or_other}
+    education:
+      source_variable: qualification
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": lower_secondary_or_less, "2": upper_secondary, "3": tertiary}
+    employment:
+      source_variable: labor_state
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": employed, "2": unemployed, "3": not_in_labor_force}
+    household_income:
+      source_variable: annual_hh_resources
+      review_status: approved
+      transform: identity
+      missing_values: {"-7": refused}
+      expected_source: {minimum: 0, maximum: 500000}
+    work_autonomy:
+      source_variable: decision_latitude
+      review_status: approved
+      transform: reverse_scale
+      missing_values: {"-8": dont_know}
+      routing: {indicator: work_eligible, eligible_values: ["1"]}
+      expected_source: {minimum: 1, maximum: 5}
+      transform_params: {source_min: 1, source_max: 5}
+    institutional_trust:
+      source_variable: public_trust
+      review_status: approved
+      transform: identity
+      missing_values: {"-9": not_stated}
+      expected_source: {minimum: 1, maximum: 5}
+    community_participation:
+      source_variable: volunteer
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": "no", "1": "yes"}
+    survey_weight:
+      source_variable: weight
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 0.01, maximum: 10}
+    work_module:
+      source_variable: work_eligible
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": not_eligible, "1": eligible}
+
+  values_work_2018:
+    age:
+      source_variable: age_years
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: gender_text
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: [woman, man, nonbinary]}
+      transform_params:
+        value_map: {woman: woman, man: man, nonbinary: nonbinary_or_other}
+    education:
+      source_variable: edu_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": lower_secondary_or_less, "2": upper_secondary, "3": tertiary}
+    employment:
+      source_variable: employment_text
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: [working, seeking, outside]}
+      transform_params:
+        value_map: {working: employed, seeking: unemployed, outside: not_in_labor_force}
+    household_income:
+      source_variable: annual_household_income
+      review_status: approved
+      transform: identity
+      missing_values: {"NA_CODE": not_stated}
+      expected_source: {minimum: 0, maximum: 500000}
+    work_autonomy:
+      source_variable: decision_control
+      review_status: unreviewed
+      transform: null
+      review_note: Candidate item intentionally awaits human review.
+    institutional_trust:
+      source_variable: trust_score
+      review_status: approved
+      transform: identity
+      missing_values: {"99": not_stated}
+      expected_source: {minimum: 1, maximum: 5}
+    community_participation:
+      source_variable: community_flag
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["yes", "no"]}
+      transform_params:
+        value_map: {"yes": "yes", "no": "no"}
+    survey_weight:
+      source_variable: sample_weight
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 0.01, maximum: 10}
+    work_module:
+      source_variable: module_work
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": not_eligible, "1": eligible}
+
+  values_work_2021:
+    age:
+      source_variable: respondent_age
+      review_status: approved
+      transform: identity
+      expected_source: {minimum: 18, maximum: 79}
+    gender:
+      source_variable: gender_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["10", "20", "30"]}
+      transform_params:
+        value_map: {"10": woman, "20": man, "30": nonbinary_or_other}
+    education:
+      source_variable: qualification
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: [basic, upper, degree]}
+      transform_params:
+        value_map: {basic: lower_secondary_or_less, upper: upper_secondary, degree: tertiary}
+    employment:
+      source_variable: employment_code
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["1", "2", "3"]}
+      transform_params:
+        value_map: {"1": employed, "2": unemployed, "3": not_in_labor_force}
+    household_income:
+      source_variable: monthly_personal_earnings
+      review_status: ambiguous
+      transform: null
+      review_note: Personal monthly earnings cannot replace annual household income without additional evidence.
+      comparability_warning: Unit and resource concept both differ.
+    work_autonomy:
+      source_variable: autonomy_score
+      review_status: approved
+      transform: identity
+      missing_values: {"98": dont_know}
+      routing: {indicator: work_route, eligible_values: [eligible]}
+      expected_source: {minimum: 1, maximum: 5}
+    institutional_trust:
+      source_variable: institution_score
+      review_status: approved
+      transform: identity
+      missing_values: {"99": not_stated}
+      expected_source: {minimum: 1, maximum: 5}
+    community_participation:
+      source_variable: community_activity
+      review_status: approved
+      transform: categorical_recode
+      expected_source: {allowed_values: ["0", "1"]}
+      transform_params:
+        value_map: {"0": "no", "1": "yes"}
+    survey_weight:
+      source_variable: null
+      review_status: unavailable
+      transform: null
+      review_note: This synthetic wave intentionally contains no survey weight.
+    work_module:
+      source_variable: work_route
+      review_status: approved
+      transform: identity
+      expected_source: {allowed_values: [not_eligible, eligible]}

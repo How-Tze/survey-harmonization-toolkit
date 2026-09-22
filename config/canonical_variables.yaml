@@ -1,0 +1,67 @@
+schema_version: 1
+canonical_variables:
+  - name: age
+    label: Age in completed years
+    type: integer
+    required: true
+    minimum: 18
+    maximum: 79
+    interpretation_note: Direct demographic field after declared missing normalization.
+  - name: gender
+    label: Gender category
+    type: categorical
+    required: true
+    allowed_values: [woman, man, nonbinary_or_other]
+    interpretation_note: Coarse synthetic demonstration categories; not a universal gender schema.
+  - name: education
+    label: Highest education category
+    type: ordinal
+    required: true
+    allowed_values: [lower_secondary_or_less, upper_secondary, tertiary]
+    interpretation_note: Coarsened for coding compatibility; source detail is not retained.
+  - name: employment
+    label: Current employment status
+    type: categorical
+    required: true
+    allowed_values: [employed, unemployed, not_in_labor_force]
+    interpretation_note: Synthetic current-status categories.
+  - name: household_income
+    label: Annual household income in fictional credits
+    type: number
+    required: false
+    minimum: 0
+    maximum: 500000
+    interpretation_note: Only annual household amounts are approved; personal monthly earnings are blocked.
+  - name: work_autonomy
+    label: Work autonomy score
+    type: ordinal
+    required: false
+    minimum: 1
+    maximum: 5
+    interpretation_note: Synthetic single-item coding demonstration, not a validated scale.
+  - name: institutional_trust
+    label: Institutional trust score
+    type: ordinal
+    required: false
+    minimum: 1
+    maximum: 5
+    interpretation_note: Synthetic single-item coding demonstration; changed wording is blocked.
+  - name: community_participation
+    label: Participated in a community activity
+    type: categorical
+    required: false
+    allowed_values: ["no", "yes"]
+    interpretation_note: Synthetic binary participation indicator.
+  - name: survey_weight
+    label: Synthetic survey weight
+    type: number
+    required: false
+    minimum: 0.01
+    maximum: 10
+    interpretation_note: Retained as metadata; no weighted estimate is produced.
+  - name: work_module
+    label: Eligible for the work module
+    type: categorical
+    required: true
+    allowed_values: [not_eligible, eligible]
+    interpretation_note: Explicit routing indicator used to classify structural missingness.

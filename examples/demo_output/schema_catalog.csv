@@ -1,0 +1,76 @@
+dataset_id,survey_id,wave_id,position,variable,variable_label,storage_type,value_label_set,value_labels_present,source_format
+civiclife_2018,civiclife,2018,1,case_id,Synthetic respondent identifier,F8.2,,False,spss
+civiclife_2018,civiclife,2018,2,age_years,Age in completed years,F8.2,,False,spss
+civiclife_2018,civiclife,2018,3,sex,Gender code,F8.2,labels0,True,spss
+civiclife_2018,civiclife,2018,4,educ3,Highest education group,F8.2,labels1,True,spss
+civiclife_2018,civiclife,2018,5,labour,Current employment status,F8.2,labels2,True,spss
+civiclife_2018,civiclife,2018,6,hh_income_annual,Annual household income in fictional credits,F8.2,,False,spss
+civiclife_2018,civiclife,2018,7,auto_rev,"Work autonomy, reverse direction",F8.2,,False,spss
+civiclife_2018,civiclife,2018,8,trust_index,Trust in public institutions,F8.2,,False,spss
+civiclife_2018,civiclife,2018,9,community_member,Community activity participation,F8.2,labels3,True,spss
+civiclife_2018,civiclife,2018,10,work_module,Eligible for work module,F8.2,labels4,True,spss
+civiclife_2018,civiclife,2018,11,weight,Synthetic survey weight,F8.2,,False,spss
+civiclife_2020,civiclife,2020,1,respondent_id,Synthetic respondent identifier,F8.2,,False,spss
+civiclife_2020,civiclife,2020,2,age,Age in completed years,F8.2,,False,spss
+civiclife_2020,civiclife,2020,3,gender_code,Gender code,F8.2,labels0,True,spss
+civiclife_2020,civiclife,2020,4,education_code,Highest education code,F8.2,labels1,True,spss
+civiclife_2020,civiclife,2020,5,employment_code,Current employment code,F8.2,labels2,True,spss
+civiclife_2020,civiclife,2020,6,income_year,Annual household income in fictional credits,F8.2,,False,spss
+civiclife_2020,civiclife,2020,7,autonomy_0_4,Work autonomy from zero to four,F8.2,,False,spss
+civiclife_2020,civiclife,2020,8,trust_score,Trust in public institutions,F8.2,,False,spss
+civiclife_2020,civiclife,2020,9,participated,Community activity participation,F8.2,labels3,True,spss
+civiclife_2020,civiclife,2020,10,module_flag,Eligible for work module,F8.2,labels4,True,spss
+civiclife_2020,civiclife,2020,11,survey_weight,Synthetic survey weight,F8.2,,False,spss
+civiclife_2022,civiclife,2022,1,rid,Synthetic respondent identifier,F8.2,,False,spss
+civiclife_2022,civiclife,2022,2,age_yrs,Age in completed years,F8.2,,False,spss
+civiclife_2022,civiclife,2022,3,gender,Gender code,F8.2,labels0,True,spss
+civiclife_2022,civiclife,2022,4,edu_level,Highest education group,A8,,False,spss
+civiclife_2022,civiclife,2022,5,employ,Current employment status,F8.2,labels1,True,spss
+civiclife_2022,civiclife,2022,6,household_income,Annual household income in fictional credits,F8.2,,False,spss
+civiclife_2022,civiclife,2022,7,control_score,Work autonomy score,F8.2,,False,spss
+civiclife_2022,civiclife,2022,8,trust_index,Satisfaction with local services,F8.2,,False,spss
+civiclife_2022,civiclife,2022,9,community_part,Community activity participation,F8.2,labels2,True,spss
+civiclife_2022,civiclife,2022,10,work_module,Eligible for work module,F8.2,labels3,True,spss
+civiclife_2022,civiclife,2022,11,weight,Synthetic survey weight,F8.2,,False,spss
+household_paths_2019,household_paths,2019,1,pid,Synthetic respondent identifier,l %12.0g,,False,stata
+household_paths_2019,household_paths,2019,2,age,Age in completed years,l %12.0g,,False,stata
+household_paths_2019,household_paths,2019,3,sex_code,Gender code,l %12.0g,sex_code,True,stata
+household_paths_2019,household_paths,2019,4,schooling_years,Completed years of education,l %12.0g,,False,stata
+household_paths_2019,household_paths,2019,5,employment_code,Current employment code,l %12.0g,employment_code,True,stata
+household_paths_2019,household_paths,2019,6,hh_inc_year,Annual household income in fictional credits,l %12.0g,,False,stata
+household_paths_2019,household_paths,2019,7,job_control,Work autonomy score,d %10.0g,,False,stata
+household_paths_2019,household_paths,2019,8,trustgov_0_4,Trust in public institutions from zero to four,d %10.0g,,False,stata
+household_paths_2019,household_paths,2019,9,work_route,Eligible for work module,l %12.0g,work_route,True,stata
+household_paths_2019,household_paths,2019,10,pweight,Synthetic survey weight,d %10.0g,,False,stata
+household_paths_2021,household_paths,2021,1,person_key,Synthetic respondent identifier,l %12.0g,,False,stata
+household_paths_2021,household_paths,2021,2,age_yrs,Age in completed years,l %12.0g,,False,stata
+household_paths_2021,household_paths,2021,3,gender_text,Gender category,1 %1s,,False,stata
+household_paths_2021,household_paths,2021,4,qualification,Highest qualification group,l %12.0g,qualification,True,stata
+household_paths_2021,household_paths,2021,5,labor_state,Current employment status,l %12.0g,labor_state,True,stata
+household_paths_2021,household_paths,2021,6,annual_hh_resources,Annual household income in fictional credits,l %12.0g,,False,stata
+household_paths_2021,household_paths,2021,7,decision_latitude,"Work autonomy, reverse direction",d %10.0g,,False,stata
+household_paths_2021,household_paths,2021,8,public_trust,Trust in public institutions,l %12.0g,,False,stata
+household_paths_2021,household_paths,2021,9,volunteer,Community activity participation,l %12.0g,volunteer,True,stata
+household_paths_2021,household_paths,2021,10,work_eligible,Eligible for work module,l %12.0g,work_eligible,True,stata
+household_paths_2021,household_paths,2021,11,weight,Synthetic survey weight,d %10.0g,,False,stata
+values_work_2018,values_work,2018,1,respondent,Synthetic respondent identifier,string,,False,csv
+values_work_2018,values_work,2018,2,age_years,Age in completed years,integer,,False,csv
+values_work_2018,values_work,2018,3,gender_text,Self-described gender category,string,,False,csv
+values_work_2018,values_work,2018,4,edu_code,Highest education code,integer,edu_code,True,csv
+values_work_2018,values_work,2018,5,employment_text,Current employment status,string,,False,csv
+values_work_2018,values_work,2018,6,annual_household_income,Annual household income in fictional credits,number,,False,csv
+values_work_2018,values_work,2018,7,decision_control,Decision control at work candidate item,integer,,False,csv
+values_work_2018,values_work,2018,8,trust_score,Trust in public institutions,integer,,False,csv
+values_work_2018,values_work,2018,9,community_flag,Took part in a community activity,string,,False,csv
+values_work_2018,values_work,2018,10,module_work,Routed into work module,integer,module_work,True,csv
+values_work_2018,values_work,2018,11,sample_weight,Synthetic survey weight,number,,False,csv
+values_work_2021,values_work,2021,1,id,Synthetic respondent identifier,string,,False,csv
+values_work_2021,values_work,2021,2,respondent_age,Age in completed years,integer,,False,csv
+values_work_2021,values_work,2021,3,gender_code,Gender code,integer,gender_code,True,csv
+values_work_2021,values_work,2021,4,qualification,Highest qualification group,string,,False,csv
+values_work_2021,values_work,2021,5,employment_code,Current employment code,integer,employment_code,True,csv
+values_work_2021,values_work,2021,6,monthly_personal_earnings,Monthly personal earnings in fictional credits,number,,False,csv
+values_work_2021,values_work,2021,7,autonomy_score,Work autonomy score,integer,,False,csv
+values_work_2021,values_work,2021,8,institution_score,Trust in public institutions,integer,,False,csv
+values_work_2021,values_work,2021,9,community_activity,Took part in a community activity,integer,community_activity,True,csv
+values_work_2021,values_work,2021,10,work_route,Routed into work module,string,,False,csv

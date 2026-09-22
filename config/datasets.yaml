@@ -1,0 +1,81 @@
+schema_version: 1
+datasets:
+  - dataset_id: civiclife_2018
+    survey_id: civiclife
+    survey_name: CivicLife Survey
+    wave_id: "2018"
+    path: data/synthetic/sources/civiclife_2018.sav
+    format: spss
+    respondent_id: case_id
+    weight_variable: weight
+    universe_note: Synthetic residents aged 18 to 79.
+    source_note: Newly generated fictional repeated cross-section.
+    license_status: synthetic
+  - dataset_id: civiclife_2020
+    survey_id: civiclife
+    survey_name: CivicLife Survey
+    wave_id: "2020"
+    path: data/synthetic/sources/civiclife_2020.sav
+    format: spss
+    respondent_id: respondent_id
+    weight_variable: survey_weight
+    universe_note: Synthetic residents aged 18 to 79.
+    source_note: Newly generated fictional repeated cross-section.
+    license_status: synthetic
+  - dataset_id: civiclife_2022
+    survey_id: civiclife
+    survey_name: CivicLife Survey
+    wave_id: "2022"
+    path: data/synthetic/sources/civiclife_2022.sav
+    format: spss
+    respondent_id: rid
+    weight_variable: weight
+    universe_note: Synthetic residents aged 18 to 79.
+    source_note: Newly generated fictional repeated cross-section with a changed trust item.
+    license_status: synthetic
+  - dataset_id: household_paths_2019
+    survey_id: household_paths
+    survey_name: Household Paths Study
+    wave_id: "2019"
+    path: data/synthetic/sources/household_paths_2019.dta
+    format: stata
+    respondent_id: pid
+    weight_variable: pweight
+    universe_note: Synthetic household panel entrants aged 18 to 79.
+    source_note: Newly generated fictional panel-style wave.
+    license_status: synthetic
+  - dataset_id: household_paths_2021
+    survey_id: household_paths
+    survey_name: Household Paths Study
+    wave_id: "2021"
+    path: data/synthetic/sources/household_paths_2021.dta
+    format: stata
+    respondent_id: person_key
+    weight_variable: weight
+    universe_note: Synthetic household panel members aged 18 to 79.
+    source_note: Newly generated fictional panel-style wave.
+    license_status: synthetic
+  - dataset_id: values_work_2018
+    survey_id: values_work
+    survey_name: Values and Work Monitor
+    wave_id: "2018"
+    path: data/synthetic/sources/values_work_2018.csv
+    format: csv
+    respondent_id: respondent
+    weight_variable: sample_weight
+    codebook_path: data/synthetic/codebooks/values_work_2018.yaml
+    universe_note: Synthetic working-age community sample.
+    source_note: Newly generated fictional CSV wave.
+    license_status: synthetic
+  - dataset_id: values_work_2021
+    survey_id: values_work
+    survey_name: Values and Work Monitor
+    wave_id: "2021"
+    path: data/synthetic/sources/values_work_2021.csv
+    format: csv
+    respondent_id: id
+    weight_variable: null
+    codebook_path: data/synthetic/codebooks/values_work_2021.yaml
+    universe_note: Synthetic working-age community sample.
+    source_note: Newly generated fictional CSV wave with no survey weight.
+    license_status: synthetic
